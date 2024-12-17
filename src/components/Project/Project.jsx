@@ -60,7 +60,7 @@ const projectData = {
       {
         header: "About the Video",
         paragraphs: [
-          "This video is outdated 😳😳 but left it in here haha. I cover a little bit about octree and first person controls.",
+          "This video is outdated 😳😳 but I left it in here... woops haha. I cover a little bit about octree and first person controls.",
         ],
       },
     ],
