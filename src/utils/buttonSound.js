@@ -1,5 +1,6 @@
 import { useAudioStore } from "../Experience/stores/audioStore";
-const buttonsound = new Audio("/music/ButtonClick.ogg");
+
+const buttonsound = new Audio("/audio/sfx/ButtonClick.ogg");
 
 export const playSound = () => {
   const isAudioEnabled = useAudioStore.getState().isAudioEnabled;

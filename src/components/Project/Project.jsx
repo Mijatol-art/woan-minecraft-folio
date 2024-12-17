@@ -11,17 +11,10 @@ const projectData = {
     externalLink: "https://youtu.be/ij2vrkoVI8c",
     content: [
       {
-        header: "Header One",
+        header: "About the Video",
         paragraphs: [
-          "This is the first paragraph describing Roll Safe.",
-          "Add additional paragraphs about Roll Safe here.",
-        ],
-      },
-      {
-        header: "Header Two",
-        paragraphs: [
-          "This is the second paragraph with more details about Roll Safe.",
-          "More detailed information can be added in new paragraphs.",
+          "Tutorials are awesome and all, but sometimes we get into tutorial hell and watch many many videos over and over again. Then when we try to create something on our own we struggle to do so and watch more tutorials.",
+          "In this video I talk about how you can develop your own natural intuition by used case studies you can find online. While many of them are great and point out things, you can also look at the things they don't point out for even more information. It might be trivial to the authors of the article, but often times it is new information for those starting out. I do this all the time.",
         ],
       },
     ],
@@ -32,17 +25,11 @@ const projectData = {
     externalLink: "https://www.youtube.com/watch?v=VaidlrZSVqI",
     content: [
       {
-        header: "Header One",
+        header: "About the Video",
         paragraphs: [
-          "This is the first paragraph describing Salt Bae.",
-          "Additional context about Salt Bae can go here.",
-        ],
-      },
-      {
-        header: "Header Two",
-        paragraphs: [
-          "This is the second paragraph with more details about Salt Bae.",
-          "More paragraphs can be added to elaborate on Salt Bae.",
+          "Once you see something that really inspires you, it can come across as a dream or something unachievable.",
+          "Don't worry, you can make that thing too. It'll just take sometime. The biggest issue is not knowing the path or where to take the first step. In this video, I take a really amazing website and show you how you can break down a website that inspires you into a self-learning plan so you have an order and structure to learn from.",
+          "Soon, you will be able to make the website you want!!! Just believe in yourself and stick to the plan! You got this 💪💪💪!!! I was very very slow and confused when I first started programming. If you're a newer programmer, the only difference between me and you is time!",
         ],
       },
     ],
@@ -53,18 +40,15 @@ const projectData = {
     externalLink: "https://www.youtube.com/watch?v=6QdkIOo-fe0",
     content: [
       {
-        header: "Header One",
+        header: "About the Video",
         paragraphs: [
-          "This is the first paragraph describing Success Kid.",
+          "Ever wanted to make a multiplayer game? In this video I describe how to make a fairly simple multiplayer game with a limited tech stack. It's not paticularly robust for larger games, but for a prototyping workflow it definitely works out well. Some concepts also transfer over to larger projects though.",
           "More information about Success Kid can be added here.",
         ],
       },
       {
-        header: "Header Two",
-        paragraphs: [
-          "This is the second paragraph with more details about Success Kid.",
-          "Additional Success Kid details can go in new paragraphs.",
-        ],
+        header: "Tech featured in video",
+        paragraphs: [" - Squoosh", " - Heroku", " - three.js", " - Blender"],
       },
     ],
   },
@@ -74,17 +58,9 @@ const projectData = {
     externalLink: "https://youtu.be/C4g2U2ZYbZ4",
     content: [
       {
-        header: "Header One",
+        header: "About the Video",
         paragraphs: [
-          "This is the first paragraph describing Surprised Pikachu.",
-          "More context about Surprised Pikachu can be written here.",
-        ],
-      },
-      {
-        header: "Header Two",
-        paragraphs: [
-          "This is the second paragraph with more details about Surprised Pikachu.",
-          "Additional paragraphs about Surprised Pikachu can be added easily.",
+          "This video is outdated 😳😳 but left it in here haha. I cover a little bit about octree and first person controls.",
         ],
       },
     ],
@@ -114,7 +90,7 @@ const Project = ({ projectID }) => {
 
       {project.content.map((section, index) => (
         <div key={index} className="project-section">
-          <h2 className="section-header">{section.header}</h2>
+          <h2 className="project-section-header">{section.header}</h2>
           {section.paragraphs.map((paragraph, pIndex) => (
             <p key={`${index}-${pIndex}`} className="section-paragraph">
               {paragraph}

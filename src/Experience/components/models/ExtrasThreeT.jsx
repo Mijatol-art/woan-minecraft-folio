@@ -11,8 +11,8 @@ import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial
 
 import { useAudioStore } from "../../stores/audioStore";
 
-const doorOpeningSound = new Audio("/music/DoorOpening.ogg");
-const doorClosingSound = new Audio("/music/DoorClosing.ogg");
+const doorOpeningSound = new Audio("/audio/sfx/DoorOpening.ogg");
+const doorClosingSound = new Audio("/audio/sfx/DoorClosing.ogg");
 doorOpeningSound.volume = 0.4;
 doorClosingSound.volume = 0.4;
 

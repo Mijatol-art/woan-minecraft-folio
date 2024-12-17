@@ -1,7 +1,6 @@
 import "./App.scss";
 import Experience from "./Experience/Experience";
 import Modal from "./components/Modal/Modal";
-import Project from "./components/Project/Project";
 import AudioToggleButton from "./components/AudioToggleButton/AudioToggleButton";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 import InfoButton from "./components/InfoButton/InfoButton";
@@ -12,9 +11,7 @@ function App() {
       <LoadingScreen />
       <AudioToggleButton />
       <InfoButton />
-      <Modal>
-        <Project />
-      </Modal>
+      <Modal />
       <Experience />
     </>
   );

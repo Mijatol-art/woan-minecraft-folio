@@ -5,7 +5,7 @@ import "./AudioToggleButton.scss";
 import { playSound } from "../../utils/buttonSound";
 import { useAudioStore } from "../../Experience/stores/audioStore";
 
-export const music = new Audio("/music/Sweden.ogg");
+export const music = new Audio("/audio/music/Sweden.ogg");
 music.loop = true;
 
 const AudioToggleButton = () => {
