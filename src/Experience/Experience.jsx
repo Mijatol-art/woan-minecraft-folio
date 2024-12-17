@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import Scene from "./Scene";
 import { useModalStore } from "./stores/modalStore";
+import normalizeWheel from "normalize-wheel";
 
 const Experience = () => {
   const camera1 = useRef();
@@ -19,8 +20,12 @@ const Experience = () => {
   useEffect(() => {
     const handleWheel = (e) => {
       if (isModalOpen) return;
-      targetScrollProgress.current =
-        targetScrollProgress.current + Math.sign(e.deltaY) * scrollSpeed;
+      const normalized = normalizeWheel(e);
+
+      targetScrollProgress.current +=
+        Math.sign(normalized.pixelY) *
+        scrollSpeed *
+        Math.min(Math.abs(normalized.pixelY) / 100, 1);
     };
 
     const handlePointerDown = () => {
