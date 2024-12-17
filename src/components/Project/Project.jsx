@@ -43,7 +43,6 @@ const projectData = {
         header: "About the Video",
         paragraphs: [
           "Ever wanted to make a multiplayer game? In this video I describe how to make a fairly simple multiplayer game with a limited tech stack. It's not paticularly robust for larger games, but for a prototyping workflow it definitely works out well. Some concepts also transfer over to larger projects though.",
-          "More information about Success Kid can be added here.",
         ],
       },
       {
