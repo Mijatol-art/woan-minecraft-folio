@@ -1,12 +1,19 @@
 import React from "react";
 
 import "./Info.scss";
+import Button from "../Button/Button";
 
 const infoMeData = {
   one: {
     content: [
       {
-        header: "Special Thanks, Credits, & Inspiration",
+        header: "💭 'Bout this folio",
+        paragraphs: [
+          "This folio was created to teach others how to create an immersive portfolio with custom camera movements and managing states. It's not a fully fledged project but has all the components necessary to expand from! Click the button above to learn how to create a portfolio like this from baking textures or custom camera movements!!!",
+        ],
+      },
+      {
+        header: "🎉 Special Thanks, Credits, & Inspiration",
         paragraphs: [
           " - A big thanks to *MCprep Blender addon creators*. It saves so much time working with Minecraft-like things in Blender. Would not have been possible otherwise.",
           " - Special thanks to *Foxel MC* for the inspiration for the house design and letting me use it.",
@@ -20,7 +27,7 @@ const infoMeData = {
         ],
       },
       {
-        header: "Tools, Technologies, & More",
+        header: "🤖 Tools, Technologies, & More",
         paragraphs: [
           " - Entire project was spanned over two months, some days I spent 12 hours and some days I spent like 30 minutes, so I don't even remember how long it took me (at least 100 hours), but it was really fun!!!",
           " - *Blender* was used for all 3D stuff (driver animations, baking, modeling, rigging etc.). Notable plugins include MCprep, SimpleBake, and UVPackMaster 3.",
@@ -68,18 +75,24 @@ const Info = () => {
   };
 
   return (
-    <div className="data-container">
-      {data.content.map((section, index) => (
-        <div key={index} className="data-section">
-          <h2 className="info-section-header">{section.header}</h2>
-          {section.paragraphs.map((paragraph, pIndex) => (
-            <p key={`${index}-${pIndex}`} className="section-paragraph">
-              {parseText(paragraph)}
-            </p>
-          ))}
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="data-container">
+        <Button href="https://youtu.be/lf9ZBsi24m4" type={"link"}>
+          Learn how to create this portfolio!
+        </Button>
+
+        {data.content.map((section, index) => (
+          <div key={index} className="data-section">
+            <h2 className="info-section-header">{section.header}</h2>
+            {section.paragraphs.map((paragraph, pIndex) => (
+              <p key={`${index}-${pIndex}`} className="section-paragraph">
+                {parseText(paragraph)}
+              </p>
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
