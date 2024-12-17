@@ -31,7 +31,7 @@ const Experience = () => {
     const handlePointerMove = (e) => {
       if (!isSwiping.current) return;
 
-      const touchMultiplier = e.pointerType === "touch" ? 0.24 : 0.17;
+      const touchMultiplier = e.pointerType === "touch" ? 0.26 : 0.17;
 
       targetScrollProgress.current =
         targetScrollProgress.current +
