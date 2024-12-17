@@ -47,9 +47,9 @@
   gap: 24px;
 }
 
-.instructions-container {
+.intro-message-container {
   position: absolute;
-  top: 42%;
+  top: 35%;
   left: 50%;
   width: 100%;
   display: flex;
@@ -61,8 +61,35 @@
   font-size: 24px;
 
   @media (max-width: 480px) {
-    top: 41%;
+    top: 35%;
     font-size: 20px;
+  }
+
+  &.revealed {
+    display: none;
+  }
+}
+
+.instructions-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+
+  @media (max-width: 480px) {
+    top: 40%;
+    font-size: 20px;
+  }
+
+  @media (max-width: 390px) {
+    font-size: 16px;
   }
 
   &.revealed {
