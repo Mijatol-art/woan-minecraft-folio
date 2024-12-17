@@ -34,7 +34,7 @@ const infoMeData = {
           " - *Audacity* was used to convert mp3 files into ogg files for smaller file sizes and retaining quality.",
           " - *Figma* was used to edit baked textures and create custom SVGs.",
           " - *Poly Haven* was used for the HDRI.",
-          " - *Global state management stores were handled with zustand.",
+          " - Global state management stores were handled with *zustand*.",
           " - Vite's default *React template* was used.",
           " - *SCSS* was the choice for the website styles.",
           " - *Vercel* was used for deployment and *SquareSpace* for the domain name. Vercel was free which is amazing. Domain name cost 14 USD for one year.",
