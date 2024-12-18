@@ -16,6 +16,7 @@ const Experience = () => {
   const isSwiping = useRef(false);
   const mouseOffset = useRef(new THREE.Vector3());
   const { isModalOpen } = useModalStore();
+  const lastTouchY = useRef(null);
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -36,15 +37,25 @@ const Experience = () => {
     const handlePointerMove = (e) => {
       if (!isSwiping.current) return;
 
-      const touchMultiplier = e.pointerType === "touch" ? 0.25 : 0.17;
+      if (e.pointerType === "touch") {
+        if (lastTouchY.current !== null) {
+          const deltaY = e.clientY - lastTouchY.current;
+          const touchMultiplier = 0.25;
 
-      targetScrollProgress.current =
-        targetScrollProgress.current +
-        Math.sign(e.movementY) * scrollSpeed * touchMultiplier;
+          targetScrollProgress.current +=
+            Math.sign(deltaY) * scrollSpeed * touchMultiplier;
+        }
+        lastTouchY.current = e.clientY;
+      } else {
+        const mouseMultiplier = 0.17;
+        targetScrollProgress.current +=
+          Math.sign(e.movementY) * scrollSpeed * mouseMultiplier;
+      }
     };
 
     const handlePointerUp = () => {
       isSwiping.current = false;
+      lastTouchY.current = null;
     };
 
     const handleMouseMove = (e) => {

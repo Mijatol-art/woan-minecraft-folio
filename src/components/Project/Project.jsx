@@ -14,7 +14,7 @@ const projectData = {
         header: "About the Video",
         paragraphs: [
           "Tutorials are awesome and all, but sometimes we get into tutorial hell and watch many many videos over and over again. Then when we try to create something on our own we struggle to do so and watch more tutorials.",
-          "In this video I talk about how you can develop your own natural intuition by used case studies you can find online. While many of them are great and point out things, you can also look at the things they don't point out for even more information. It might be trivial to the authors of the article, but often times it is new information for those starting out. I do this all the time.",
+          "In this video I talk about how you can develop your own natural intuition by using case studies you can find online. While many of them are great and point out things, you can also look at the things they don't point out for even more information. It might be trivial to the authors of the article, but often times it is new information for those starting out. I do this all the time.",
         ],
       },
     ],
