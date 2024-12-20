@@ -13,7 +13,7 @@ const aboutMeData = {
         paragraphs: [
           "Hey there👋! Thanks for stopping by <3!!! My name is Andrew and I'm just a random guy who creates things.",
           "As much as I love technology, I also love nature. I love being in the woods for hours and sometimes I will spend the entire day on top of a mountain.",
-          "When I'm not in nature or wandering around I'm probably just doing something in my room. My favorite hobbies are making funny things, hiking, piano, dancing, and photography.",
+          "When I'm not in nature or wandering around I'm probably just doing something in my room. My favorite hobbies are making funny things, hiking, gaming, piano, dancing, and photography.",
         ],
       },
       {
