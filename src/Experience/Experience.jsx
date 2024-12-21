@@ -29,28 +29,6 @@ const Experience = () => {
         Math.min(Math.abs(normalized.pixelY) / 100, 1);
     };
 
-    const handlePointerDown = () => {
-      if (isModalOpen) return;
-      isSwiping.current = true;
-    };
-
-    const handlePointerMove = (e) => {
-      if (!isSwiping.current) return;
-
-      if (e.pointerType === "touch") {
-        return;
-      } else {
-        const mouseMultiplier = 0.17;
-        targetScrollProgress.current +=
-          Math.sign(e.movementY) * scrollSpeed * mouseMultiplier;
-      }
-    };
-
-    const handlePointerUp = () => {
-      isSwiping.current = false;
-      lastTouchY.current = null;
-    };
-
     const handleMouseMove = (e) => {
       const mouseX = (e.clientX / window.innerWidth) * 2 - 1;
       const mouseY = (e.clientY / window.innerHeight) * 2 - 1;
@@ -62,34 +40,63 @@ const Experience = () => {
       mouseOffset.current.y = mouseY * sensitivityY;
     };
 
-    const handleTouchMove = (e) => {
-      if (!isSwiping.current) return;
-
-      const deltaY = e.touches[0].clientY - lastTouchY.current;
-      const touchMultiplier = 0.32;
-      targetScrollProgress.current +=
-        Math.sign(deltaY) * scrollSpeed * touchMultiplier;
+    const handleTouchStart = (e) => {
+      if (isModalOpen) return;
+      isSwiping.current = true;
       lastTouchY.current = e.touches[0].clientY;
     };
 
-    window.addEventListener("wheel", handleWheel);
+    const handleTouchMove = (e) => {
+      if (!isSwiping.current) return;
+
+      if (lastTouchY.current !== null) {
+        const deltaY = e.touches[0].clientY - lastTouchY.current;
+        const touchMultiplier = 0.3;
+        targetScrollProgress.current +=
+          Math.sign(deltaY) * scrollSpeed * touchMultiplier;
+      }
+      lastTouchY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e) => {
+      isSwiping.current = false;
+      lastTouchY.current = null;
+    };
+
+    const handleMouseDown = (e) => {
+      if (isModalOpen || e.pointerType === "touch") return;
+      isSwiping.current = true;
+    };
+
+    const handleMouseDrag = (e) => {
+      if (!isSwiping.current || e.pointerType === "touch") return;
+      const mouseMultiplier = 0.2;
+      targetScrollProgress.current +=
+        Math.sign(e.movementY) * scrollSpeed * mouseMultiplier;
+    };
+
+    const handleMouseUp = () => {
+      isSwiping.current = false;
+    };
+
+    window.addEventListener("wheel", handleWheel, { passive: false });
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("pointerdown", handlePointerDown);
-    window.addEventListener("pointermove", handlePointerMove);
-    window.addEventListener("pointerup", handlePointerUp);
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchstart", handlePointerDown);
-    window.addEventListener("touchend", handlePointerUp);
+    window.addEventListener("mousedown", handleMouseDown);
+    window.addEventListener("mousemove", handleMouseDrag);
+    window.addEventListener("mouseup", handleMouseUp);
+    window.addEventListener("touchstart", handleTouchStart, { passive: false });
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    window.addEventListener("touchend", handleTouchEnd);
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("pointerdown", handlePointerDown);
-      window.removeEventListener("pointermove", handlePointerMove);
-      window.removeEventListener("pointerup", handlePointerUp);
+      window.removeEventListener("mousedown", handleMouseDown);
+      window.removeEventListener("mousemove", handleMouseDrag);
+      window.removeEventListener("mouseup", handleMouseUp);
+      window.removeEventListener("touchstart", handleTouchStart);
       window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchstart", handlePointerDown);
-      window.removeEventListener("touchend", handlePointerUp);
+      window.removeEventListener("touchend", handleTouchEnd);
     };
   }, [isModalOpen]);
 
