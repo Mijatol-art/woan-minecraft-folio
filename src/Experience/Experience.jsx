@@ -66,7 +66,7 @@ const Experience = () => {
       if (!isSwiping.current) return;
 
       const deltaY = e.touches[0].clientY - lastTouchY.current;
-      const touchMultiplier = 0.26;
+      const touchMultiplier = 0.32;
       targetScrollProgress.current +=
         Math.sign(deltaY) * scrollSpeed * touchMultiplier;
       lastTouchY.current = e.touches[0].clientY;
