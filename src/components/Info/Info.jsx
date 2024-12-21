@@ -16,7 +16,7 @@ const infoMeData = {
         header: "🎉 Special Thanks, Credits, & Inspiration",
         paragraphs: [
           " - A big thanks to *MCprep Blender addon creators*. It saves so much time working with Minecraft-like things in Blender. Would not have been possible otherwise.",
-          " - Special thanks to *Foxel MC* for the inspiration for the house design and letting me use it.",
+          " - Special thanks to ❤️*Foxel MC*❤️ for the inspiration for the house design and letting me use it!!!",
           " - Thank you *JDGraphics*, the Minecraft font is super awesome.",
           " - Big shoutout to *Bruno Simon's three.js journey* course and all the helpers in the Discord channel. If I didn't start my journey with this course, I don't think I'd be where I am now.",
           " - Shoutout to *Wawa Sensei's R3F course*, learned a lot on the camera controls lesson.",
