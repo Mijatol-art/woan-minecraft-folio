@@ -38,14 +38,7 @@ const Experience = () => {
       if (!isSwiping.current) return;
 
       if (e.pointerType === "touch") {
-        if (lastTouchY.current !== null) {
-          const deltaY = e.clientY - lastTouchY.current;
-          const touchMultiplier = 0.25;
-
-          targetScrollProgress.current +=
-            Math.sign(deltaY) * scrollSpeed * touchMultiplier;
-        }
-        lastTouchY.current = e.clientY;
+        return;
       } else {
         const mouseMultiplier = 0.17;
         targetScrollProgress.current +=
@@ -73,7 +66,7 @@ const Experience = () => {
       if (!isSwiping.current) return;
 
       const deltaY = e.touches[0].clientY - lastTouchY.current;
-      const touchMultiplier = 0.25;
+      const touchMultiplier = 0.26;
       targetScrollProgress.current +=
         Math.sign(deltaY) * scrollSpeed * touchMultiplier;
       lastTouchY.current = e.touches[0].clientY;
