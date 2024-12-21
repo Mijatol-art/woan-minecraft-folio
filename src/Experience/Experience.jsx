@@ -69,11 +69,24 @@ const Experience = () => {
       mouseOffset.current.y = mouseY * sensitivityY;
     };
 
+    const handleTouchMove = (e) => {
+      if (!isSwiping.current) return;
+
+      const deltaY = e.touches[0].clientY - lastTouchY.current;
+      const touchMultiplier = 0.25;
+      targetScrollProgress.current +=
+        Math.sign(deltaY) * scrollSpeed * touchMultiplier;
+      lastTouchY.current = e.touches[0].clientY;
+    };
+
     window.addEventListener("wheel", handleWheel);
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("pointerdown", handlePointerDown);
     window.addEventListener("pointermove", handlePointerMove);
     window.addEventListener("pointerup", handlePointerUp);
+    window.addEventListener("touchmove", handleTouchMove);
+    window.addEventListener("touchstart", handlePointerDown);
+    window.addEventListener("touchend", handlePointerUp);
 
     return () => {
       window.removeEventListener("wheel", handleWheel);
@@ -81,6 +94,9 @@ const Experience = () => {
       window.removeEventListener("pointerdown", handlePointerDown);
       window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("pointerup", handlePointerUp);
+      window.removeEventListener("touchmove", handleTouchMove);
+      window.removeEventListener("touchstart", handlePointerDown);
+      window.removeEventListener("touchend", handlePointerUp);
     };
   }, [isModalOpen]);
 
