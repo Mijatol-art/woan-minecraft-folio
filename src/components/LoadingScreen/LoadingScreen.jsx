@@ -52,7 +52,7 @@ const LoadingScreen = () => {
           <div
             className={`instructions-container ${isRevealed ? "revealed" : ""}`}
           >
-            🖱️ Swipe/Scroll Up/Down to Navigate~ 👈
+            🖱️ Drag/Scroll Up/Down to Navigate~ 👈
           </div>
           {progress < 100 ? (
             <div className="loading-bar-container">
