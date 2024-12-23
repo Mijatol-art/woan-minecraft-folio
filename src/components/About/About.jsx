@@ -60,7 +60,7 @@ const About = () => {
       <div className="image-wrapper-two">
         <img
           src="/images/crochet.webp"
-          alt={"Panda Logo"}
+          alt={"Crochet Mr. Cloud"}
           className="data-image-two"
         />
       </div>
