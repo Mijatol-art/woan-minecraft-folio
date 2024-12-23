@@ -77,7 +77,7 @@ const About = () => {
       </div>
       <p className="section-paragraph">- - Mr. Cloud - -</p>
 
-      <div className="image-wrapper">
+      <div className="image-wrapper-3">
         <img
           src="/images/partner.webp"
           alt={"Partner in Crime"}
