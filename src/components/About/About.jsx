@@ -77,14 +77,14 @@ const About = () => {
       </div>
       <p className="section-paragraph">- - Mr. Cloud - -</p>
 
-      <div className="image-wrapper-3">
+      <div className="image-wrapper">
         <img
           src="/images/partner.webp"
-          alt={"Panda Partner in Crime"}
+          alt={"Partner in Crime"}
           className="data-image"
         />
       </div>
-      <p className="section-paragraph">- - My Panda partner in crime - -</p>
+      <p className="section-paragraph">- - My partner in crime - -</p>
     </div>
   );
 };
