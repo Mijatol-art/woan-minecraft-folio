@@ -20,7 +20,7 @@ const aboutMeData = {
         header: "Fun Facts",
         paragraphs: [
           " - I am obsessed with cute things. In particular, I really love pandas because they are sooooo adorable and cute. I have a stuffed animal panda that I take with me to places I go as a companion 🐼❤️.",
-          " - I love creating things, every single art is super fascinating to me, from music, cermaics, crochet, to painting etc. Not good at many, but still love all of them haha.",
+          " - I love creating things, every single art is super fascinating to me, from music, ceramics, crochet, to painting etc. Not good at many, but still love all of them haha.",
           " - I love teaching. Teaching means others get to create more things and those things make more people happy and that makes me really happy.",
           " - I love wandering. I will often take random paths in the middle of cities or nature to see how far it takes me and where it takes me.",
         ],

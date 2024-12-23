@@ -22,6 +22,7 @@ const infoMeData = {
           " - Shoutout to *Wawa Sensei's R3F course*, learned a lot on the camera controls lesson.",
           " - Audio was sourced from *myinstants.com, voicemod.net, and downloads.khinsider.com*",
           " - All the employees at the *Blender Foundation*, thank you from the bottom of my heart.",
+          " - Amazing mob models all credited to Vincent Yanez on Sketchfab!! Thank you for them Vincent!!",
           " - Of course shoutout to the amazing *three.js community* not only for the tool itself but also for three.js discourse, a lot of my issues were solved on there. Love all of you!!!",
           " - Lastly, to all the people that created amazing free online web tools like image to *pixelated image converters* or *beizer curve CSS visualizers,* thank you!",
         ],
