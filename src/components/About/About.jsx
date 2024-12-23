@@ -65,7 +65,7 @@ const About = () => {
         />
       </div>
       <p className="section-paragraph">
-        - - Photo of Mr. Cloud in progress (looks like a fish haha 🐟) - -
+        - - Mr. Cloud in progress (looks like a fish haha 🐟) - -
       </p>
 
       <div className="image-wrapper-two">
@@ -75,7 +75,16 @@ const About = () => {
           className="data-image-two"
         />
       </div>
-      <p className="section-paragraph">- - Photo of Mr. Cloud - -</p>
+      <p className="section-paragraph">- - Mr. Cloud - -</p>
+
+      <div className="image-wrapper-3">
+        <img
+          src="/images/partner.webp"
+          alt={"Panda Partner in Crime"}
+          className="data-image"
+        />
+      </div>
+      <p className="section-paragraph">- - My Panda partner in crime - -</p>
     </div>
   );
 };
