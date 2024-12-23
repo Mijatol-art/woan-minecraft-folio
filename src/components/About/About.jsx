@@ -59,11 +59,23 @@ const About = () => {
 
       <div className="image-wrapper-two">
         <img
+          src="/images/inprogress.webp"
+          alt={"Crochet Mr. Cloud in progress"}
+          className="data-image-two"
+        />
+      </div>
+      <p className="section-paragraph">
+        - - Photo of Mr. Cloud in progress (looks like a fish haha 🐟) - -
+      </p>
+
+      <div className="image-wrapper-two">
+        <img
           src="/images/crochet.webp"
           alt={"Crochet Mr. Cloud"}
           className="data-image-two"
         />
       </div>
+      <p className="section-paragraph">- - Photo of Mr. Cloud - -</p>
     </div>
   );
 };
