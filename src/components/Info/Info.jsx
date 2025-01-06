@@ -9,7 +9,7 @@ const infoMeData = {
       {
         header: "💭 'Bout this folio",
         paragraphs: [
-          "This folio was created to teach others how to create an immersive portfolio with custom camera movements and managing states. It's not a fully fledged project but has all the components necessary to expand from! Click the button above to learn how to create a portfolio like this from baking textures to custom camera movements!!!",
+          "This folio was created to teach others how to create an immersive portfolio! Recently won FWA of the day🎉!!! Click the button above to learn how to create a portfolio like this from baking textures to custom camera movements!!!",
         ],
       },
       {
