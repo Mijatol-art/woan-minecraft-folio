@@ -2,17 +2,22 @@ import React from "react";
 
 import "./AudioToggleButton.scss";
 
-import { playSound } from "../../utils/buttonSound";
 import { useAudioStore } from "../../Experience/stores/audioStore";
-
-export const music = new Audio("/audio/music/Sweden.ogg");
-music.loop = true;
+import {
+  playSound,
+  playBackgroundMusic,
+  pauseBackgroundMusic,
+} from "../../utils/audioSystem";
 
 const AudioToggleButton = () => {
   const { isAudioEnabled, setIsAudioEnabled } = useAudioStore();
 
   const toggleAudio = () => {
-    isAudioEnabled ? music.pause() : music.play();
+    if (isAudioEnabled) {
+      pauseBackgroundMusic();
+    } else {
+      playBackgroundMusic();
+    }
     setIsAudioEnabled(!isAudioEnabled);
   };
 
@@ -20,7 +25,7 @@ const AudioToggleButton = () => {
     <>
       <button
         onClick={() => {
-          playSound();
+          playSound("buttonClick");
           toggleAudio();
         }}
         className="audio-toggle-button"

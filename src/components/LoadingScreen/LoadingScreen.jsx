@@ -6,8 +6,7 @@ import { useProgress } from "@react-three/drei";
 
 import Button from "../Button/Button";
 
-import { music } from "../AudioToggleButton/AudioToggleButton";
-import { playSound } from "../../utils/buttonSound";
+import { playSound, playBackgroundMusic } from "../../utils/audioSystem";
 import { useAudioStore } from "../../Experience/stores/audioStore";
 
 const LoadingScreen = () => {
@@ -17,10 +16,10 @@ const LoadingScreen = () => {
   const { setIsAudioEnabled } = useAudioStore();
 
   const handleReveal = () => {
-    music.play();
     setIsAudioEnabled(true);
     setIsRevealed(true);
-    playSound();
+    playBackgroundMusic();
+    playSound("buttonClick");
   };
 
   const handleAnimationFinished = () => {

@@ -2,7 +2,7 @@ import React from "react";
 
 import "./InfoButton.scss";
 
-import { playSound } from "../../utils/buttonSound";
+import { playSound } from "../../utils/audioSystem";
 import { useModalStore } from "../../Experience/stores/modalStore";
 
 import Info from "../Info/Info";
@@ -14,7 +14,7 @@ const InfoButton = () => {
     <>
       <button
         onClick={() => {
-          playSound();
+          playSound("buttonClick");
           openModal("Information", <Info />, "info");
         }}
         className="info-toggle-button"

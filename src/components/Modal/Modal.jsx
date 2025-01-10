@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Modal.scss";
 
 import { useModalStore } from "../../Experience/stores/modalStore";
-import { playSound } from "../../utils/buttonSound";
+import { playSound } from "../../utils/audioSystem";
 
 const Modal = () => {
   const { isModalOpen, modalTitle, modalContent, closeModal } = useModalStore();
@@ -46,7 +46,7 @@ const Modal = () => {
             <button
               onClick={() => {
                 closeModal();
-                playSound();
+                playSound("buttonClick");
               }}
               className="modal-close-button"
             >
