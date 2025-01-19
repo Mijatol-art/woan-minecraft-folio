@@ -8,7 +8,8 @@ import { useModalStore } from "./stores/modalStore";
 import normalizeWheel from "normalize-wheel";
 
 const Experience = () => {
-  const camera1 = useRef();
+  const cameraGroup = useRef();
+  const camera = useRef();
   const [scrollProgress, setscrollProgress] = useState(0);
   const targetScrollProgress = useRef(0);
   const scrollSpeed = 0.005;
@@ -104,19 +105,22 @@ const Experience = () => {
     <>
       <Canvas eventSource={document.getElementById("root")}>
         <Scene
-          camera={camera1}
+          cameraGroup={cameraGroup}
+          camera={camera}
           scrollProgress={scrollProgress}
           setscrollProgress={setscrollProgress}
           targetScrollProgress={targetScrollProgress}
           lerpFactor={lerpFactor}
           mouseOffset={mouseOffset}
         />
-        <PerspectiveCamera
-          ref={camera1}
-          makeDefault
-          fov={70}
-          position={[4, 67, 38]}
-        />
+        <group ref={cameraGroup}>
+          <PerspectiveCamera
+            ref={camera}
+            makeDefault
+            fov={70}
+            position={[0, 0, 0]} // Reset to center of group
+          />
+        </group>
       </Canvas>
     </>
   );
