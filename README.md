@@ -1,8 +1,9 @@
 # 🎉 Award-winning Immersive Minecraft Portfolio 🎉
 
-**[Live](http://woanminecraftfolio.com/)**
+**[Live Site](http://woanminecraftfolio.com/)**
 
 This repo contains code of a an immersive three.js website portfolio!! Recently won some awards!! See them here:
+
 - [FWA of the Day](https://thefwa.com/cases/educational-minecraft-folio)
 - [Awwwards Honorable Mention](https://www.awwwards.com/sites/educational-minecraft-folio)
 - [CSSDA Special Kudios and Best UI/UX/Innovation Awards](https://www.cssdesignawards.com/sites/educational-minecraft-folio/46808/)
