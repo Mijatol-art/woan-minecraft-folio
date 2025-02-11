@@ -1,4 +1,4 @@
-# 🎉 Award-winning Immersive Minecraft Portfolio 🎉
+# 🎉 Award-Winning Immersive Minecraft Portfolio 🎉
 
 **[Live Site](http://woanminecraftfolio.com/)**
 
