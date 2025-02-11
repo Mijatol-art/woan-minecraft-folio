@@ -16,3 +16,7 @@ This repo contains code of a an immersive three.js website portfolio!! Recently 
 npm install
 npm run dev
 ```
+
+❤️ Inspo!!! ❤️
+
+- [House Design](https://youtu.be/lkJ8zbYotGQ)
