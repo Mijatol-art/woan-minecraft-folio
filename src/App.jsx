@@ -14,7 +14,6 @@ function App() {
       <InfoButton />
       <Modal />
       <Experience />
-      <Analytics />
     </>
   );
 }
