@@ -1,4 +1,4 @@
-import { React, Suspense, useState } from "react";
+import { React, Suspense, useState, useRef } from "react";
 
 import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
@@ -25,6 +25,11 @@ const Scene = ({
   mouseOffset,
 }) => {
   const [pulseIntensity, setPulseIntensity] = useState(0);
+  // Use a Quaternion buffer instead of Euler angles to prevent rotation flips
+  const [rotationBufferQuat] = useState(
+    new THREE.Quaternion().setFromEuler(new THREE.Euler(-0.12, 0.17, 0.02))
+  );
+
   const cameraCurve = new THREE.CatmullRomCurve3(
     [
       new THREE.Vector3(2, 65, 47.5),
@@ -125,11 +130,14 @@ const Scene = ({
         const lerpedRotation = new THREE.Euler().setFromQuaternion(
           lerpingQuaternion
         );
-        return lerpedRotation;
+        return lerpingQuaternion; // Return Quaternion directly instead of Euler
       }
     }
 
-    return rotationTargets[rotationTargets.length - 1].rotation;
+    // Return the final rotation as Quaternion
+    return new THREE.Quaternion().setFromEuler(
+      rotationTargets[rotationTargets.length - 1].rotation
+    );
   };
 
   useFrame((state) => {
@@ -183,11 +191,13 @@ const Scene = ({
         -mouseOffset.current.y,
         0.1
       );
-      camera.current.position.z = 0; // Keep camera at center of group
+      camera.current.position.z = 0;
 
-      // Apply rotation to the group instead of the camera
-      const targetRotation = getLerpedRotation(newProgress);
-      cameraGroup.current.rotation.copy(targetRotation);
+      const targetQuaternion = getLerpedRotation(newProgress);
+
+      rotationBufferQuat.slerp(targetQuaternion, 0.1);
+
+      cameraGroup.current.quaternion.copy(rotationBufferQuat);
     }
   });
 
