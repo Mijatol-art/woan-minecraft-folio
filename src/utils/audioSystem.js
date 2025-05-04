@@ -5,19 +5,19 @@ import { useAudioStore } from "../Experience/stores/audioStore";
 // Create sound instances
 const sounds = {
   buttonClick: new Howl({
-    src: ["/audio/sfx/ButtonClick.ogg"],
+    src: ["/audio/sfx/ButtonClick.mp3"],
     volume: 1.0,
   }),
   doorOpening: new Howl({
-    src: ["/audio/sfx/DoorOpening.ogg"],
+    src: ["/audio/sfx/DoorOpening.mp3"],
     volume: 0.4,
   }),
   doorClosing: new Howl({
-    src: ["/audio/sfx/DoorClosing.ogg"],
+    src: ["/audio/sfx/DoorClosing.mp3"],
     volume: 0.4,
   }),
   backgroundMusic: new Howl({
-    src: ["/audio/music/Sweden.ogg"],
+    src: ["/audio/music/Sweden.mp3"],
     loop: true,
     volume: 1.0,
   }),
