@@ -1,4 +1,3 @@
-// audioSystem.js
 import { Howl } from "howler";
 import { useAudioStore } from "../Experience/stores/audioStore";
 
