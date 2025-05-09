@@ -1,6 +1,6 @@
 # 🎉 Award-Winning Immersive Minecraft Portfolio 🎉
 
-**[Live Site](http://woanminecraftfolio.com/)**
+**[Live Site](http://woanminecraftfolio.com/)** | **[Blender File](https://drive.google.com/drive/folders/1xrkCNELEefpR9clwLTjk-HQ2uRkQzaHy?usp=sharing)**
 
 This repo contains code of a an immersive three.js website portfolio!! This website won some awards! See them here:
 
