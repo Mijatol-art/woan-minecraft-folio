@@ -127,9 +127,6 @@ const Scene = ({
           lerpFactor
         );
 
-        const lerpedRotation = new THREE.Euler().setFromQuaternion(
-          lerpingQuaternion
-        );
         return lerpingQuaternion; // Return Quaternion directly instead of Euler
       }
     }
