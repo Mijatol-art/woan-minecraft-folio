@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 import "./LoadingScreen.scss";
 
 import { useProgress } from "@react-three/drei";

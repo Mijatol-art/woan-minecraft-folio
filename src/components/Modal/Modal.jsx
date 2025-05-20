@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import "./Modal.scss";
 
@@ -17,7 +17,6 @@ const Modal = () => {
       setIsAnimating(true);
       setCachedContent(modalContent);
       setCachedTitle(modalTitle);
-      // Slight delay to trigger the animation
       requestAnimationFrame(() => {
         setShouldAnimate(true);
       });

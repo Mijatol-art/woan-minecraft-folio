@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./AudioToggleButton.scss";
 
 import { useAudioStore } from "../../Experience/stores/audioStore";

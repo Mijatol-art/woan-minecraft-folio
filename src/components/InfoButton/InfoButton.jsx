@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./InfoButton.scss";
 
 import { playSound } from "../../utils/audioSystem";
