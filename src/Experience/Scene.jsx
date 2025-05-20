@@ -127,11 +127,10 @@ const Scene = ({
           lerpFactor
         );
 
-        return lerpingQuaternion; // Return Quaternion directly instead of Euler
+        return lerpingQuaternion;
       }
     }
 
-    // Return the final rotation as Quaternion
     return new THREE.Quaternion().setFromEuler(
       rotationTargets[rotationTargets.length - 1].rotation
     );
