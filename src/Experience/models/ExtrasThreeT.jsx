@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import { useGLTFWithKTX2 } from "../../utils/useGLTFWithKTX2";
-import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial";
-import { useAudioStore } from "../../stores/audioStore";
-import { playSound } from "../../../utils/audioSystem";
+import { useGLTFWithKTX2 } from "../utils/useGLTFWithKTX2";
+import { convertMaterialsToMeshBasicMaterial } from "../utils/convertMaterial";
+import { useAudioStore } from "../stores/audioStore";
+import { playSound } from "../../utils/audioSystem";
 
 export default function Model({ progress = 0, ...props }) {
   const { nodes, materials } = useGLTFWithKTX2("/models/ExtrasThreeT-v1.glb");

@@ -6,8 +6,8 @@ Files: ExtrasTwoT.glb [9.55MB] > C:\Users\andre\My Stuff\Blender Projects\Minecr
 
 import React from "react";
 
-import { useGLTFWithKTX2 } from "../../utils/useGLTFWithKTX2";
-import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial";
+import { useGLTFWithKTX2 } from "../utils/useGLTFWithKTX2";
+import { convertMaterialsToMeshBasicMaterial } from "../utils/convertMaterial";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTFWithKTX2(

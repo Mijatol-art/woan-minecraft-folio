@@ -4,16 +4,16 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 
-import House from "./components/models/HouseT";
-import BackGrass from "./components/models/BackGrassT";
-import Detail from "./components/models/DetailT";
-import Extras from "./components/models/ExtrasT";
-import ExtrasTwo from "./components/models/ExtrasTwoT";
-import ExtrasThree from "./components/models/ExtrasThreeT";
-import FrontGrass from "./components/models/FrontGrassT";
-import GrassBlocks from "./components/models/GrassBlocksT";
-import GrassSides from "./components/models/GrassSidesT";
-import Mobs from "./components/models/MobsT";
+import House from "./models/HouseT";
+import BackGrass from "./models/BackGrassT";
+import Detail from "./models/DetailT";
+import Extras from "./models/ExtrasT";
+import ExtrasTwo from "./models/ExtrasTwoT";
+import ExtrasThree from "./models/ExtrasThreeT";
+import FrontGrass from "./models/FrontGrassT";
+import GrassBlocks from "./models/GrassBlocksT";
+import GrassSides from "./models/GrassSidesT";
+import Mobs from "./models/MobsT";
 
 const Scene = ({
   cameraGroup,

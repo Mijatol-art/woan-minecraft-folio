@@ -5,8 +5,8 @@ Files: BackGrassT.glb [5.3MB] > C:\Users\andre\My Stuff\Blender Projects\Minecra
 */
 
 import React from "react";
-import { useGLTFWithKTX2 } from "../../utils/useGLTFWithKTX2";
-import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial";
+import { useGLTFWithKTX2 } from "../utils/useGLTFWithKTX2";
+import { convertMaterialsToMeshBasicMaterial } from "../utils/convertMaterial";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTFWithKTX2(

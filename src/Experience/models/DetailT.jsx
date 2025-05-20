@@ -7,13 +7,13 @@
 import React, { useEffect, useState } from "react";
 
 import * as THREE from "three";
-import { useGLTFWithKTX2 } from "../../utils/useGLTFWithKTX2";
+import { useGLTFWithKTX2 } from "../utils/useGLTFWithKTX2";
 
-import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial";
-import { useModalStore } from "../../stores/modalStore";
+import { convertMaterialsToMeshBasicMaterial } from "../utils/convertMaterial";
+import { useModalStore } from "../stores/modalStore";
 
-import About from "../../../components/About/About";
-import Project from "../../../components/Project/Project";
+import About from "../../components/About/About";
+import Project from "../../components/Project/Project";
 
 export default function Model({ progress = 0, pulseIntensity = 0, ...props }) {
   const { nodes, materials } = useGLTFWithKTX2("/models/DetailT-v1.glb");

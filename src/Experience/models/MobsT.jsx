@@ -8,8 +8,8 @@ import React, { useEffect } from "react";
 
 import { useAnimations } from "@react-three/drei";
 
-import { useGLTFWithKTX2 } from "../../utils/useGLTFWithKTX2";
-import { convertMaterialsToMeshBasicMaterial } from "../../utils/convertMaterial";
+import { useGLTFWithKTX2 } from "../utils/useGLTFWithKTX2";
+import { convertMaterialsToMeshBasicMaterial } from "../utils/convertMaterial";
 
 export default function Model({ progress = 0, ...props }) {
   const group = React.useRef();
