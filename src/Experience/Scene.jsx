@@ -25,7 +25,6 @@ const Scene = ({
   mouseOffset,
 }) => {
   const [pulseIntensity, setPulseIntensity] = useState(0);
-  // Use a Quaternion buffer instead of Euler angles to prevent rotation flips
   const [rotationBufferQuat] = useState(
     new THREE.Quaternion().setFromEuler(new THREE.Euler(-0.12, 0.17, 0.02))
   );
