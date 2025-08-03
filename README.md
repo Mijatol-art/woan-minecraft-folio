@@ -17,6 +17,11 @@ npm install
 npm run dev
 ```
 
+## Updates!!!
+
+- Added a rotation buffer to smooth rotations.
+- I did end up adding a camera group so the offset was according to its local axis instead of the global one, it felt better that way.
+
 ## ❤️ Inspo!!! ❤️
 
 - [House Design](https://youtu.be/lkJ8zbYotGQ)
