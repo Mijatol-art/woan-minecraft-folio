@@ -103,7 +103,7 @@ const Experience = () => {
 
   return (
     <>
-      <Canvas eventSource={document.getElementById("root")}>
+      <Canvas flat={true} eventSource={document.getElementById("root")}>
         <Scene
           cameraGroup={cameraGroup}
           camera={camera}
