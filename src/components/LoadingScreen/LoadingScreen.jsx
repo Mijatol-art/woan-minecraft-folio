@@ -46,12 +46,12 @@ const LoadingScreen = () => {
               isRevealed ? "revealed" : ""
             }`}
           >
-            Hi👋! Thanks for stopping by!! ❤️
+            Xin chào👋! Cảm ơn bạn đã ghé thăm!! ❤️
           </div>
           <div
             className={`instructions-container ${isRevealed ? "revealed" : ""}`}
           >
-            🖱️ Drag/Scroll Up/Down to Navigate~ 👈
+            🖱️ Kéo/Cuộn lên/Xuống để điều hướng~ 👈
           </div>
           {progress < 100 ? (
             <div className="loading-bar-container">
@@ -63,7 +63,7 @@ const LoadingScreen = () => {
             </div>
           ) : !isRevealed ? (
             <Button onClick={handleReveal}>
-              &nbsp; &nbsp; &nbsp; Enter World &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; Vào thế giới. &nbsp; &nbsp; &nbsp;
             </Button>
           ) : null}
         </div>
