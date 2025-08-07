@@ -12,6 +12,7 @@ const aboutMeData = {
         paragraphs: [
         "  Xin chào👋! Cảm ơn bạn đã ghé thăm <3!!! Tôi tên là Cà Rốt . Tôi là một animator, developer!"
       ],
+      }
       {
         header: "Fun Facts",
         paragraphs: [
