@@ -3,25 +3,20 @@ import Button from "../Button/Button";
 
 const aboutMeData = {
   one: {
-    name: "Andrew Woan",
+    name: "Carrotie",
     imageUrl: "/images/me.webp",
-    externalLink: "https://www.youtube.com/@andrewwoan",
+    externalLink: "https://www.youtube.com/@carrotkhumbell",
     content: [
       {
-        header: "About Me",
+        header: "Giới thiệu về tôi",
         paragraphs: [
-          "Hey there👋! Thanks for stopping by <3!!! My name is Andrew I love teaching, cute things, and creating things that make other people happy.",
-          "As much as I love technology, I also love nature. I love being in the woods for hours and sometimes I will spend the entire day on top of a mountain.",
-          "When I'm not in nature or wandering around I'm probably just doing something in my room. My favorite hobbies are making funny things, hiking, gaming, piano, dancing, and photography.",
-        ],
+        "  Xin chào👋! Cảm ơn bạn đã ghé thăm <3!!! Tôi tên là Cà Rốt . Tôi là một animator, developer!"
       },
       {
         header: "Fun Facts",
         paragraphs: [
-          " - I am obsessed with cute things. In particular, I really love pandas because they are sooooo adorable and cute. I have a stuffed animal panda that I take with me to places I go as a companion 🐼❤️.",
-          " - I love creating things, every single art is super fascinating to me, from music, ceramics, crochet, to painting etc. Not good at many, but still love all of them haha.",
-          " - I love teaching. Teaching means others get to create more things and those things make more people happy and that makes me really happy.",
-          " - I love wandering. I will often take random paths in the middle of cities or nature to see how far it takes me and where it takes me.",
+          " - Tôi bị ám ảnh bởi những thứ dễ thương. Đặc biệt, tôi rất thích gấu trúc vì chúng rất đáng yêu và dễ thương.",
+          " - Tôi thích sáng tạo, mọi loại hình nghệ thuật đều vô cùng hấp dẫn đối với tôi, từ âm nhạc, gốm sứ, móc len, đến hội họa, v.v. Tôi không giỏi nhiều thứ, nhưng vẫn thích tất cả chúng haha."
         ],
       },
     ],
